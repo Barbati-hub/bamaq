@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "dcd4aaf4-2211-427d-b862-7b782705a10e",
+		"name": "Bamaq",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21524978"
+	},
+	"item": [
+		{
+			"name": "create/create",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": \"1991-10-15\",\n    \"nome\": \"Hoje é um novo dia\",\n    \"cpfCNPJ\": \"1234567898\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}menu/create",
+					"host": [
+						"{{URL}}menu"
+					],
+					"path": [
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "menu/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}menu/",
+					"host": [
+						"{{URL}}menu"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "menu/getclienteporcpf",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}menu/11122277799",
+					"host": [
+						"{{URL}}menu"
+					],
+					"path": [
+						"11122277799"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "menu/updatecliente",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "2024-04-04",
+							"type": "text"
+						},
+						{
+							"key": "nome",
+							"value": "Douglas Alves Barbati",
+							"type": "text"
+						},
+						{
+							"key": "cpfCNPJ",
+							"value": "00577221256",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}menu/00577221256",
+					"host": [
+						"{{URL}}menu"
+					],
+					"path": [
+						"00577221256"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "menu/deletecliente",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "menu/cadastrar",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Teste Final\",\n    \"cpfCNPJ\": \"15520463000151\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}menu/cadastrar",
+					"host": [
+						"{{URL}}menu"
+					],
+					"path": [
+						"cadastrar"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://localhost:5000/",
+			"type": "string"
+		}
+	]
+}
